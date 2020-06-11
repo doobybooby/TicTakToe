@@ -1,0 +1,14 @@
+#<Getting Started>
+
+> To create TicTakToe you need functions to display the board, take in a user input and change the board accordingly
+> Here are some functions you are going to have to understand in order to build the game
+> It is easier if you divide the problem into smaller sub-problems
+
+* Display the board - displayBoard()
+
+* Ask user for the position of the board they want to change - positionChoice()
+
+* Replace the old choice with the new user choice - replacementChoice()
+
+* Ask user if they wish to continue playing - keepPlaying()
+
