@@ -27,14 +27,20 @@
 * We can use multiple print() to create a board
 
 > print("1|2|3")
+
 > print("4|5|6")
+
 > print("7|8|9")
 
 > Just like that we have created a 3x3 board.
 > you can have your own variations 
   
 > print("1|2|3")
+
 > print("------")
+
 > print("4|5|6")
+
 > print("------")
+
 > print("7|8|9")
