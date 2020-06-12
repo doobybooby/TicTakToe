@@ -42,7 +42,7 @@ print("7|8|9")
 
 ## positionChoice()
 
-*Get a user's input and determine if it's a valid input
+* Get a user's input and determine if it's a valid input
 
 ###### How?
 
@@ -52,7 +52,7 @@ userinput = input("Please enter any number between 1-3")
 ```
 What if user enter an invalid choice? Such as "7" or "Abracadabra"
 
-
+You can use a while loop to keep asking user to enter a valid value
 
 
 
