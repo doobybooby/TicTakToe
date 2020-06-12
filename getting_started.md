@@ -52,9 +52,34 @@ userinput = input("Please enter any number between 1-3")
 ```
 What if user enter an invalid choice? Such as "7" or "Abracadabra"
 
-You can use a while loop to keep asking user to enter a valid value
+You can use a while loop to keep asking user until they enter a correct value
+```python
+###You want user's input to be a integer between 1-3
+###   This is equivalent of checking if something is in [1,2,3]
+###   userinput = input("is string by default")
+###   userinput.isdigit() will check if the user input is a digit
+###   int(userinput) will cast the input into an integer
 
+#Start with an initial false value
+userinput = "false"
 
+#Begin the while loop
+## while the user doesn't enter a number or if the number is out of range
 
-
+  while not (choice.isdigit() or withinRange):
+        
+        choice = input("Plese enter a valid number: ")
+        
+        # Digit Check
+        if choice.isdigit():
+            print("Sorry that is not valid")
+        
+        # Range Check
+        if choice.isdigit():
+            if int(choice) in acceptableRange:
+                withinRange = True
+            else:
+                False
+                
+    return int(choice)
 
