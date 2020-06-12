@@ -22,26 +22,20 @@
 
 * You already know how to create one line using a print() statement.
 ```python
-> print("-----this is the first line----")
+print("-----this is the first line----")
 ```  
 * We can use multiple print() to create a board
 ```python
-> print("1|2|3")
-
-> print("4|5|6")
-
-> print("7|8|9")
+print("1|2|3")
+print("4|5|6")
+print("7|8|9")
 ```
 > Just like that we have created a 3x3 board.
 > you can have your own variations 
 ```python 
-> print("1|2|3")
-
-> print("------")
-
-> print("4|5|6")
-
-> print("------")
-
-> print("7|8|9")
+print("1|2|3")
+print("------")
+print("4|5|6")
+print("------")
+print("7|8|9")
 ```
