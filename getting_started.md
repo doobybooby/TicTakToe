@@ -18,13 +18,13 @@
 ## Display the board
 * TicTacToe requires 3x3 unit board
 
-> how?
+###### How?
 
-* You already know how to create one line using a print() statement.
+You already know how to create one line using a print() statement.
 ```python
 print("-----this is the first line----")
 ```  
-* We can use multiple print() to create a board
+We can use multiple print() to create a board
 ```python
 print("1|2|3")
 print("4|5|6")
@@ -39,3 +39,22 @@ print("4|5|6")
 print("------")
 print("7|8|9")
 ```
+
+## positionChoice()
+
+*Get a user's input and determine if it's a valid input
+
+###### How?
+
+You already know how ask for user's input
+```python
+userinput = input("Please enter any number between 1-3")
+```
+What if user enter an invalid choice? Such as "7" or "Abracadabra"
+
+
+
+
+
+
+
