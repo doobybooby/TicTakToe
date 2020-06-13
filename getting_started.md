@@ -66,20 +66,20 @@ userinput = "false"
 #Begin the while loop
 ## while the user doesn't enter a number or if the number is out of range
 
-  while not (choice.isdigit() or withinRange):
+while not (choice.isdigit() or withinRange):
+      
+      choice = input("Plese enter a valid number: ")
         
-        choice = input("Plese enter a valid number: ")
+      # Digit Check
+      if choice.isdigit():
+          print("Sorry that is not valid")
         
-        # Digit Check
-        if choice.isdigit():
-            print("Sorry that is not valid")
-        
-        # Range Check
-        if choice.isdigit():
-            if int(choice) in acceptableRange:
-                withinRange = True
-            else:
-                False
+      # Range Check
+      if choice.isdigit():
+          if int(choice) in acceptableRange:
+              withinRange = True
+          else:
+              False
                 
-    return int(choice)
+return int(choice)
 
