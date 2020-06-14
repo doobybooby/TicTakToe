@@ -31,8 +31,8 @@ print("4|5|6")
 print("7|8|9")
 ```
 > Just like that we have created a 3x3 board.
-> you can have your own variations 
-```python 
+> you can have your own variations
+```python
 print("1|2|3")
 print("------")
 print("4|5|6")
@@ -40,7 +40,12 @@ print("------")
 print("7|8|9")
 ```
 
-## positionChoice()
+
+######How?
+
+
+
+## Accepting user's input
 
 * Get a user's input and determine if it's a valid input
 
@@ -67,19 +72,18 @@ userinput = "false"
 ## while the user doesn't enter a number or if the number is out of range
 
 while not (choice.isdigit() or withinRange):
-      
+
       choice = input("Plese enter a valid number: ")
-        
+
       # Digit Check
       if choice.isdigit():
           print("Sorry that is not valid")
-        
+
       # Range Check
       if choice.isdigit():
           if int(choice) in acceptableRange:
               withinRange = True
           else:
               False
-                
-return int(choice)
 
+return int(choice)
