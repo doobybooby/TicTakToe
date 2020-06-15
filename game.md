@@ -3,12 +3,14 @@
 ```python
 import random
 
-
+#Display the board
 def displayBoard(board):
     print(board[0]+ " | " + board[1]+" | " + board[2])
     print(board[3]+ " | " + board[4]+" | " + board[5])
     print(board[6]+ " | " + board[7]+" | " + board[8])    
-    
+
+#Ask player one to choose 'X' or 'O', player two gets the other one by default
+
 def playerInput():
     '''
     OUTPUT: (player1 marker, player2 marker)
@@ -26,10 +28,12 @@ def playerInput():
         return ('O','X')
         
 
-
+#Mark the board with the proper player's mark
 def placeMarker(board, marker, position):
     board[position] = marker
     
+
+#Check all winning cases
 def winCheck(board, marker):
     
     #Horizontal check
@@ -57,7 +61,7 @@ def winCheck(board, marker):
         return False
     
 
-        
+#Randomly chooses who goes first        
 def chooseFirst():
     
     coinFlip = random.randint(0,1000)
@@ -66,14 +70,16 @@ def chooseFirst():
     else:
         return 'Player 2' 
 
-       
+
+#Check if the the position user asked for is empty
 def spaceCheck(board, position):
     
     if board[position] == '-':
         return True
     else:
         return False
-    
+
+#Check if the entire board is filled. Indirectly checking for tie
 def fullBoardCheck(board):
     
     for i in range(0,9):
@@ -82,7 +88,7 @@ def fullBoardCheck(board):
         
     return True
     
-            
+#Ask player to place a mark on the board            
 def playerChoice(board):
     
     nextChoice = ""
@@ -93,7 +99,7 @@ def playerChoice(board):
         
     return nextChoice
     
-    
+#Ask player if they want to play again    
 def replay():
         
     choice = ''
@@ -110,20 +116,8 @@ def replay():
         return True
     else:
         return False
-    
-
-def main():
         
-    displayBoard(board)
-    player1 = playerInput
-    print("Randomly deciding who will go first")
-    chooseFirst()
-    
-    while not (winCheck(board,'X') or winCheck(board, 'O')):
-    
-        placeMarker(board, player1, playerChoice(board))
-    
-
+#The actual game
 print("Welcome to TicTacToe")
 
 while True:
