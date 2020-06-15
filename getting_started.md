@@ -108,7 +108,7 @@ def userChoice():
 
 ###### How?
 Our board is a list, and lists have indices
-
+```python
 def replacementChoice(gameList, position):
 
     userPlacement = input("Type a string to place at position: ")
@@ -116,7 +116,7 @@ def replacementChoice(gameList, position):
     gameList[position] = userPlacement
 
     return gameList
-
+```
 
 ## Ask user if they wish to play again
 * Ask the user if they want play again, 'Y' for yes and 'N' for no
@@ -125,6 +125,7 @@ def replacementChoice(gameList, position):
 This is almost same as asking for user's user's input
 Ask for the user's input, and check if its a valid input ('Y' or 'N').
 
+```python
 def keepPlaying():
 
     choice = 'wrong'
@@ -141,6 +142,7 @@ def keepPlaying():
         return True
     else:
         return False
+```
 
 ## Put them together
 playAgain = True
