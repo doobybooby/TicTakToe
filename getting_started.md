@@ -6,7 +6,7 @@
 
 * Display the board - displayBoard()
 
-* Ask user for the position of the board they want to change - positionChoice()
+* Ask user for the position of the board they want to change - userChoice()
 
 * Replace the old choice with the new user choice - replaceChoice()
 
@@ -167,11 +167,7 @@ while playAgain:
     playAgain = keepPlaying()
 ```
 
-
-
-
-
-
+## Now you are ready to buid TicTacToe
 
 
 
