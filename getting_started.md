@@ -145,6 +145,7 @@ def keepPlaying():
 ```
 
 ## Put them together
+```python
 playAgain = True
 board = [0,1,2]
 
@@ -154,3 +155,4 @@ while playAgain:
     board = replacementChoice(board, position)
     displayGame(gameList)
     gameon = keepPlaying()
+```
