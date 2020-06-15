@@ -150,9 +150,28 @@ playAgain = True
 board = [0,1,2]
 
 while playAgain:
+
+    #Display the board
     displayGame(board)
+    
+    #Ask user for their choice
     position = userChoice()
+    
+    #Update the board
     board = replacementChoice(board, position)
+    
+    #Display the board 
     displayGame(gameList)
+    
+    #Ask user if they want to stay in the while loop
     playAgain = keepPlaying()
 ```
+
+
+
+
+
+
+
+
+
