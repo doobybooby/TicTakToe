@@ -30,23 +30,32 @@ print("1|2|3")
 print("4|5|6")
 print("7|8|9")
 ```
-> Just like that we have created a 3x3 board.
-> you can have your own variations
+But you can't edit this board because it doesn't have indices
+instead you can create a list and use indexing to create a more efficient board
 ```python
-print("1|2|3")
-print("------")
-print("4|5|6")
-print("------")
-print("7|8|9")
+#first create a list
+board = ['-', '-', '-', '-', '-', '-', '-', '-', '-',]
+
+#now create your board by printing each element
+print(board[0]+'|'+board[1]+'|'+board[2])
+##this will print -|-|-
+
+#In order to change values, you can do so by, board[i] = ' '
+board[0] = 'X'
+board[1] = 'O'
+##now it will print X|O|-
+
+#To print the whole board you can do something like this
+print(board[0]+'|'+board[1]+'|'+board[2])
+print(board[3]+'|'+board[4]+'|'+board[5])
+print(board[6]+'|'+board[7]+'|'+board[8])
+##this will print
+X|O|-
+-|-|-
+-|-|-
 ```
 
-
-######How?
-
-
-
 ## Accepting user's input
-
 * Get a user's input and determine if it's a valid input
 
 ###### How?
@@ -64,26 +73,81 @@ You can use a while loop to keep asking user until they enter a correct value
 ###   userinput = input("is string by default")
 ###   userinput.isdigit() will check if the user input is a digit
 ###   int(userinput) will cast the input into an integer
+###   check if int(userinput) is within the acceptable range [1,2,3]
+
+#This is the acceptable range anything else is invalid
+withinRange = [1,2,3]
 
 #Start with an initial false value
 userinput = "false"
 
 #Begin the while loop
 ## while the user doesn't enter a number or if the number is out of range
+while not (userinput.isdigit() or withinRange):
 
-while not (choice.isdigit() or withinRange):
-
-      choice = input("Plese enter a valid number: ")
+      userinput = input("Plese enter a valid number: ")
 
       # Digit Check
-      if choice.isdigit():
+      if userinput.isdigit():
           print("Sorry that is not valid")
 
       # Range Check
-      if choice.isdigit():
-          if int(choice) in acceptableRange:
+      if userinput.isdigit():
+          if int(userinpput) in acceptableRange:
               withinRange = True
           else:
-              False
+            #Exit while loop
+            False
 
-return int(choice)
+return int(userinput)
+
+
+##Insert user's choice on the board
+* If the user has inserted a valid input, you have to change the board or else you'll be displaying the same empty board
+
+######How?
+our board is a list, and lists have indices
+
+def replacementChoice(gameList, position):
+
+    userPlacement = input("Type a string to place at position: ")
+
+    gameList[position] = userPlacement
+
+    return gameList
+
+
+##Ask user if they wish to play again
+* Ask the user if they want play again, 'Y' for yes and 'N' for no
+
+###### How?
+This is almost same as asking for user's user's input
+Ask for the user's input, and check if its a valid input ('Y' or 'N').
+
+def keepPlaying():
+
+    choice = 'wrong'
+
+    while choice not in ['Y', 'N']:
+
+        choice = input("Keep Playing (Y or N): ")
+
+        if choice not in ['Y', 'N']:
+
+            print('Sorry, invalid choice')
+
+    if choice == 'Y':
+        return True
+    else:
+        return False
+
+##Put them together
+playAgain = True
+board = [0,1,2]
+
+while playAgain:
+    displayGame(board)
+    position = positionChoice()
+    gameList = replacementChoice(gameList, position)
+    displayGame(gameList)
+    gameon = keepPlaying()
