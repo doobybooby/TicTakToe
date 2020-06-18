@@ -10,7 +10,6 @@ def displayBoard(board):
     print(board[6]+ " | " + board[7]+" | " + board[8])    
 
 #Ask player one to choose 'X' or 'O', player two gets the other one by default
-
 def playerInput():
     '''
     OUTPUT: (player1 marker, player2 marker)
@@ -152,13 +151,16 @@ while True:
             
             # choose a position
             position = int(playerChoice(board))
+            
             # place the marker on the position 
             placeMarker(board, player1Marker, position)
+            
             #check if they won 
             if winCheck(board, player1Marker):
                 displayBoard(board)
                 print("Player 1 has won")
                 gameOn = False
+                
             # or check for tie
             else:
                 if fullBoardCheck(board):
@@ -176,13 +178,16 @@ while True:
             
             # choose a position
             position = int(playerChoice(board))
+            
             # place the marker on the position 
             placeMarker(board, player2Marker, position)
+            
             #check if they won 
             if winCheck(board, player2Marker):
                 displayBoard(board)
                 print("Player 2 has won")
                 gameOn = False
+                
             # or check for tie
             else:
                 if fullBoardCheck(board):
@@ -192,8 +197,9 @@ while True:
                 else:
                     turn = 'Player 1'
 
+    #Break out of the while loop on replay()
     if not replay():
         break
-    #reak out of the while loop on replay()
+
     ```
         
